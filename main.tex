@@ -5,15 +5,14 @@
 \usepackage{enumitem}
 \usepackage{booktabs}
 \usepackage{makecell}
-\usepackage{}
 
 \def\FS{Formelsammlung}
 \def\Fach{Signale und Systeme}
 \def\FachAkz{SUS}
 \title{\FS \ \Fach}
-\author{Tony Pham}
+\author{Bastian Nagler}
 \date{\today}
-\def\Semester{SoSe 2024}
+\def\Semester{WiSe 25/26}
 
 \begin{document}
 
@@ -23,7 +22,7 @@
 
 	\begin{center}
 		\vspace*{\stretch{0.5}}
-		\includegraphics[width=0.5\textwidth]{./Bilder/Logo/OTHR_FakEI_Logo.pdf}\\
+		\includegraphics[width=0.5\textwidth]{./Bilder/Logo/OTHR_FakEI_Logo.png}\\
 		\vspace*{\stretch{0.25}}
 		\Huge
 		\textsc{\FS}\\
@@ -36,10 +35,10 @@
 \vspace*{\stretch{2}}
 {\renewcommand{\arraystretch}{1.5}
 \begin{tabular}{l l}
-	\href{https://github.com/ayham291/SUS_Formelsammlung}{Originalversion:} & \hspace{4cm} \href{https://ayhamcloud.de/}{Ayham Alhulaibi}\\
-    \href{https://github.com/Vibeskanzler/SUS_Formelsammlung}{Überarbeitet von:}  & \hspace{4cm} \href{mailto:hoang.pham@st.oth-regensburg.de}{Tony Pham}\\
+	\href{https://github.com/ayham291/SUS_Formelsammlung}{Originalversion:} & \hspace{4cm} Ayham Alhulaibi\\
+    \href{https://github.com/BastianNagler/SUS_Formelsammlung}{Überarbeitet von:}  & \hspace{4cm} Bastian Nagler\\
     %Matrikelnummer:  & \hspace{4cm}\MatNr\\
-    Letzter Stand:  & \hspace{4cm} \MyDate\\
+    Letzter Stand:  & \hspace{4cm} \textsc{\Semester}  \\
     Lizenz:  & \hspace{4cm} GPLv3
 \end{tabular}
 }
@@ -72,15 +71,6 @@
 \input{Laplace}
 \input{Schaltvorgaenge}
 \input{Zeitdiskrete_SUS}
-
-
-% \newpage
-% \section{Wichtige Formeln aus der Vorlesung}
-% \textbf{Integral über die Gaußische kurve}:
-%     \[
-%         \int_{-\infty}^{\infty} e^{\frac{-1}{2\sigma^2}t^2}dt \overset{2.3}{=}
-%         \sqrt{2\cdot\pi\sigma^2}
-%     \]
 
 \end{multicols*}
 \end{document}

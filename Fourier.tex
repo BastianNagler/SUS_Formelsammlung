@@ -166,7 +166,7 @@ Sie fügen \underline{keine} neuen Frequenzen hinzu.}
 \end{gather*}
 $U_\sim:$ Wechselanteil \quad $U_0$: Gleichanteil, Mittelwert
  	\item Effektivwert mit \textbf{Fourier-Reihe}:\\
-		  $$ U_{\mathit{eff}} = \sqrt{\sum_{k=-\infty}^{\infty} c_k^2} = \sqrt{\sum_{k=0}^{\infty}U_{k,\mathit{eff}}^2} = \sqrt{U_0^2 + \frac{1}{2} \sum_{k=1}^{\infty} \hat{u}_k^2}$$
+		  $$ U_{\mathit{eff}} = \sqrt{\sum_{k=-\infty}^{\infty} \left|c_k\right|^2} = \sqrt{\sum_{k=0}^{\infty}U_{k,\mathit{eff}}^2} = \sqrt{U_0^2 + \frac{1}{2} \sum_{k=1}^{\infty} \hat{u}_k^2}$$
 	\item \textbf{Klirrfaktor}, Oberschwingungsgehalt:\\
 	      {\small Maß für Abweichung eines Signals $x(t)$ von der $\sin$-Form. Angabe von $k$ in \%. Kein Gleichanteil $U_0=0$.}
 	      \begin{align*}
@@ -222,6 +222,7 @@ $U_\sim:$ Wechselanteil \quad $U_0$: Gleichanteil, Mittelwert
 		      \[
 			      D^2 = U_1^2\cdot(I^2-I_1^2) = S^2(1-g^2)
 		      \]
+			\textcolor{red}{\small{nur g\"ultig f\"ur sinusf\"ormige Spannung $U$ und nicht-sinusf\"ormigen Strom $I$.\\}}
 \small{aus Mischtermen als Produkte von $U$ und $I$ unterschiedlicher Frequenzen.}
 	      \end{mdframed}
   		\item \textbf{Scheinleistung}\\
@@ -281,23 +282,31 @@ $U_\sim:$ Wechselanteil \quad $U_0$: Gleichanteil, Mittelwert
 
 	\item Übergang FR $\rightarrow$ FT:
 \begin{align*}
-	U_a(\omega) &= 2\pi \cdot \sum_{k=-\infty}^{+\infty} \underline{c}_k \cdot \delta(\omega-k\omega_a)\\
-	& = 2\pi \cdot \sum_{k=-\infty}^{+\infty} \frac{\underline{U}(\omega)}{t_a} \cdot \delta(\omega-k\omega_a)\\
-	&= \frac{2\pi}{t_a} \cdot \sum_{k=-\infty}^{+\infty} \underline{U}(\omega) \cdot \delta(\omega-k\omega_a) \\
-	& =  \omega_a \cdot \sum_{k=-\infty}^{+\infty} \underline{U}(\omega-k\omega_a)
+	U(\omega) &= 2\pi \cdot \sum_{k=-\infty}^{+\infty} \underline{c}_k \cdot \delta(\omega-k\omega_p)
 \end{align*}
 	\item Übergang FT $\rightarrow$ FR, Komplexe Fourierkoeffizienten, periodische Fortsetzung (vgl. Kap. \ref{komplexe_fr}):
 	\[ \boxed{
 		\quad \underline{c}_k =
-		\frac{1}{T} \cdot \underline{X}(k\omega_1) } =
-		\frac{1}{T}\int_0^T x(t) \cdot e^{-j\omega_1 t} dt
+		\frac{1}{t_p} \cdot \underline{X}(k\omega_1) } =
+		\frac{1}{t_p}\int_0^{t_p} x(t) \cdot e^{-j\omega_1 t} dt
 	\]
-	\small{$T=t_p$: Periodizität, Periodendauer.}\\
-	\small{ $\underline{c}_k$: FR-Koeff. d. periodischen Fortsetzung \\des endlichen Signals $x(t)$ mit Länge $T$.}\\
+	\small{$t_p$: Periodizität, Periodendauer.}\\
+	\small{ $\underline{c}_k$: FR-Koeff. d. periodischen Fortsetzung \\des endlichen Signals $x(t)$ mit Länge $T$.}
 	
 	\item FR-Koeffizienten $\underline{c}_k $ sind
 	\textbf{Abtastwerte} von $\underline{X}(\omega)$ bei den Frequenzen im Linienabstand:
 	\[\omega=k\omega_1=k\frac{2\pi}{T}=k\frac{2\pi}{t_p}\]
+
+	\item Spektrum periodischer Signale:
+	\begin{align*}
+	U_p(\omega)& = 2\pi \cdot \sum_{k=-\infty}^{+\infty} \frac{\underline{U}(\omega)}{t_p} \cdot \delta(\omega-k\omega_p)\\
+	&= \omega_p \cdot \sum_{k=-\infty}^{+\infty} \underline{U}(\omega) \cdot \delta(\omega-k\omega_p)
+	\end{align*}
+
+	\item Abtastfrequenz \(\omega_p\):
+	\begin{align*}
+		\omega_p &= \frac{2\pi}{t_p}
+	\end{align*}
 \end{itemize}
  \columnbreak
 \subsection{Zeit-Bandbreite-Gesetz}

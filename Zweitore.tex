@@ -77,7 +77,7 @@
 	               \qquad
                     \begin{pmatrix}
                         \underline{U}_1 \\
-                        \underline{I}_2
+                        \underline{I}_1
                     \end{pmatrix} = \textbf{\underline{A}}\cdot
                     \begin{pmatrix}
                         \underline{U}_2 \\
@@ -260,7 +260,10 @@ Bild zeigt: Symmetrisches Bezugspfeilsystem.
 \begin{samepage}
     \subsection{Matrizen elementarer Zweitore}
     \begin{center}
-    	\includegraphics[width=\textwidth]{Zweipole/Tabellen und Ergänzungen_Zweitormatrizen}
+    	\includegraphics[width=0.95\textwidth]{Zweipole/Tabellen und Ergänzungen_Zweitormatrizen}
+    \end{center}
+	\begin{center}
+    	\includegraphics[width=0.95\textwidth]{Zweipole/Matrizen_elementarer_zweitore_2.png}
     \end{center}
 \end{samepage}
 \clearpage
@@ -292,14 +295,14 @@ Torbedingung muss für ZT-Schaltungen erfüllt sein!\\
 			\includegraphics[width=\columnwidth]{Zweipole/Reihen-Parallelschaltung_Zweitoren}
 			 Reihen-Parallelschaltung
 	\[
-	\left[ \underline{H} \right] = \left[ \underline{H}_1 \right] \cdot \left[ \underline{H}_2 \right]
+	\left[ \underline{H} \right] = \left[ \underline{H}_1 \right] + \left[ \underline{H}_2 \right]
 	\]
 \end{minipage}
 \begin{minipage}{0.45\columnwidth}
 			\includegraphics[width=\columnwidth]{Zweipole/Parallel-Reihenschaltung_Zweitoren}
 			Parallel-Reihenschaltung
 	\[
-	\left[ \underline{C} \right] = \left[ \underline{C}_1 \right] \cdot \left[ \underline{C}_2 \right]
+	\left[ \underline{C} \right] = \left[ \underline{C}_1 \right] + \left[ \underline{C}_2 \right]
 	\]
 \end{minipage}
 
@@ -349,11 +352,11 @@ Entspricht einer VCVS.\\
 				\renewcommand*{\arraystretch}{1.7}
 				\begin{equation*}
 					[\underline{A}] = \begin{pmatrix}
-						\frac{1}{\nu_D} + \frac{\underline{Z}_2}{\underline{Z}_1 + \underline{Z}_2} & \frac{\underline{Z}_A}{\nu_D} \\
+						\frac{1}{\nu_D} + \textcolor{red}{\frac{\underline{Z}_2}{\underline{Z}_1 + \underline{Z}_2}} & \frac{\underline{Z}_A}{\nu_D} \\
 						\frac{1}{\nu_D \underline{Z}_E} & \frac{\underline{Z}_A}{\nu_D \underline{Z}_E}
 					\end{pmatrix}
 				\end{equation*}
-			Für idealen OP $\rightarrow$ \\
+			Für \textcolor{red}{idealen OP} $\rightarrow$ \\
 			$Z_E\rightarrow\infty, Z_A=0, v_D\rightarrow\infty$.
 			\vspace{1.1em}
 			\end{minipage}
@@ -363,17 +366,17 @@ Entspricht einer VCVS.\\
 				\frac{1}{\underline{A}_{11}}=\frac{\underline{Z}_1+\underline{Z}_2}{\underline{Z}_2} = 1 + \frac{\underline{Z}_1}{\underline{Z}_2}
 			\end{equation*}
 	\item inventierender OP\\
-	\begin{minipage}{0.4\columnwidth}
+	\begin{minipage}{0.35\columnwidth}
 		\includegraphics[width=\columnwidth]{Zweipole/inventierender_op}
 	\end{minipage}
 	\begin{minipage}{0.6\columnwidth}
 		\renewcommand*{\arraystretch}{1.7}
-		Allgemein, für idealen OP $\rightarrow$ \\
+		Für \textcolor{red}{idealen OP} $\rightarrow$ \\
 		$Z_E\rightarrow\infty,\, Z_A=0,\, v_D\rightarrow\infty$.
 		\begin{equation*}
-			[\underline{A}] \approx - \begin{pmatrix}
-				\frac{\underline{Z}_1}{\underline{Z}_2} & 0 \\
-				\frac{1}{\underline{Z}_2} & 0
+			[\underline{A}] = - \begin{pmatrix}
+				\frac{\underline{v}_D \textcolor{red}{\underline{Z}_1} + \underline{Z}_2}{\underline{v}_D \textcolor{red}{\underline{Z}_2}} & \frac{\underline{Z}_A}{\underline{v}_D}\left(1+ \frac{\underline{Z}_1}{\underline{Z}_2}\right) \\
+				\textcolor{red}{\frac{1}{\underline{Z}_2}} & \frac{\underline{Z}_A}{\underline{v}_D \underline{Z}_2}
 			\end{pmatrix}
 		\end{equation*}
 			\vspace{1em}

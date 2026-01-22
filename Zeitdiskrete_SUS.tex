@@ -210,10 +210,10 @@ Dirac-Sprung im Signal: $\infty$ hohe $f$ im Spektrum $\rightarrow$ Aliasing}
 
 \item Spektrum $U_a(\omega)$ eines abgetasteten Signals $u_a(t)$ mit $T=t_a = \frac{1}{f_a}$ aus einem Analogsignal $u(t)$:
 \begin{align*}
-U_a(\omega) &= 2\pi \cdot \sum_{k=-\infty}^{+\infty} \underline{c}_k \cdot \delta(\omega-k\omega_a)\\
-& = 2\pi \cdot \sum_{k=-\infty}^{+\infty} \frac{\underline{U}(\omega)}{t_a} \cdot \delta(\omega-k\omega_a)\\
-&= \frac{2\pi}{t_a} \cdot \sum_{k=-\infty}^{+\infty} \underline{U}(\omega) \cdot \delta(\omega-k\omega_a) \\
-& =  \omega_a \cdot \sum_{k=-\infty}^{+\infty} \underline{U}(\omega-k\omega_a)
+U_a(\omega) &= \sum_{k=-\infty}^{+\infty} \underline{c}_k \cdot \delta(\omega-k\omega_a)\\
+& = \sum_{k=-\infty}^{+\infty} \frac{\underline{U}(\omega)}{t_a} \cdot \delta(\omega-k\omega_a)\\
+&= \frac{1}{t_a} \cdot \sum_{k=-\infty}^{+\infty} \underline{U}(\omega) \cdot \delta(\omega-k\omega_a) \\
+& =  \frac{1}{t_a} \cdot \sum_{k=-\infty}^{+\infty} \underline{U}(\omega-k\omega_a)
 \end{align*}
 
 \end{itemize}
