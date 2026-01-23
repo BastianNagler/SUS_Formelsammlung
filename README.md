@@ -1,7 +1,10 @@
 # SUS Formelsammlung
-This repository/formulary is based on Signals and Systems lecture at Ostbayerische Technische Hochschule
+Formelsammlung zur Vorlesung Signale und Systeme an der OTH Regensburg.
+
+Diese Formelsammlung wurde zuletzt basierend auf der Vorlesung von Prof. Dr. A. Sehr im Wintersemester 2025/26 überarbeitet.
 
 ---
-### Disclaimer
-This formulary is not made by me, but rather only refined by me.
-Wrong formulas have been corrected, new ones added and descriptions added to those only applicable in certain cases. 
+Diese Formelsammlung wurde nicht von mir erstellt, sondern überarbeitet.
+
+Falsche Formeln wurden korrigiert, fehlende hinzugefügt und manche Beschreibungen verbessert.
+Es sind noch immer Formeln von alten Themen, welche nicht mehr behandelt werden enthalten.
